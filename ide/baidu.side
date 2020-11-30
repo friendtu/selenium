@@ -1,0 +1,76 @@
+{
+  "id": "365c4004-d28c-4cdc-ba48-54eaf0ad7457",
+  "version": "2.0",
+  "name": "baidu",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "c81505f4-77b0-4270-bbd4-99e171bd84b0",
+    "name": "first",
+    "commands": [{
+      "id": "8e926f3d-ca40-4984-8501-cdadd0214817",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7ea62b3-a793-43c4-be4c-fee5a55a3138",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "977x639",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5605d8c-6d11-42d4-81d0-eb58ae80f2cd",
+      "comment": "",
+      "command": "type",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//span[@id='s_kw_wrap']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "selenium"
+    }, {
+      "id": "0e660ec9-98d7-43a1-98bc-0f576c49cd1c",
+      "comment": "",
+      "command": "click",
+      "target": "id=su",
+      "targets": [
+        ["id=su", "id"],
+        ["css=#su", "css:finder"],
+        ["xpath=//input[@id='su']", "xpath:attributes"],
+        ["xpath=//span[@id='s_btn_wr']/input", "xpath:idRelative"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "818fd009-a75b-40a3-a1cf-c14a82e11905",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "link=下一页 >",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "91e0583c-1517-4e95-9837-5fe6c70e4738",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "glob:selenium*",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "78e6318d-6c30-4bfe-9aac-fe1c4202e398",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c81505f4-77b0-4270-bbd4-99e171bd84b0"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
