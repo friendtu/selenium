@@ -1,4 +1,4 @@
-import MySQLdb
+import mysql.connector
 
 class DataPool:
     def __init__ (self,test_case,module=None):
@@ -22,7 +22,7 @@ class DataPool:
             raise Exception("no data")
 
     def select_data(self,sql):
-        db=MySQLdb.connect(passwd="xl19760313",db="datapool")
+        db=mysql.connector.connect(passwd="xl19760313",db="datapool")
         cursor=db.cursor()
         cursor.execute(sql)
         data=cursor.fetchone()
