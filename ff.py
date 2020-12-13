@@ -1,8 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
+from DataPool import DataPool
+
+dp=DataPool('demo')
 driver=webdriver.Chrome()
 
-driver.get('http://www.baidu.com')
+driver.get( dp.get('BAIDU_HOME_URL') )
 driver.find_element_by_css_selector('#kw').send_keys("selenium")
 driver.find_element_by_id('su').click()
 #driver.maximize_window()
