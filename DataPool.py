@@ -22,7 +22,7 @@ class DataPool:
             raise Exception("no data")
 
     def select_data(self,sql):
-        db=mysql.connector.connect(passwd="xl19760313",db="datapool")
+        db=mysql.connector.connect(user='root',passwd="xl19760313",db="datapool")
         cursor=db.cursor()
         cursor.execute(sql)
         data=cursor.fetchone()
