@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import  TimeoutException
 
-wd=webdriver.WebDriver(command_executor="http://127.0.0.1:4444/wd/hub",desired_capabilities=DesiredCapabilities.CHROME)
+wd=webdriver.WebDriver(command_executor="http://192.168.31.110:4444/wd/hub",desired_capabilities=DesiredCapabilities.CHROME)
 
 wd.get('https://www.baidu.com')
 div=wd.find_element_by_class_name('s_form_wrapper')
@@ -60,7 +60,7 @@ wd.find_element_by_id('alert').click()
 alt=wd.switch_to.alert
 alt.accept()
 
-wd.find_element_by_id('alert').click()
+#wd.find_element_by_id('alert').click()
 wd.execute_script('alert("ok")')
 alt=Alert(wd)
 alt.dismiss()
